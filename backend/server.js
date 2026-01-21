@@ -23,3 +23,5 @@ app.listen(PORT, () => {
     console.log(`Открыть API: ${HOST}:${PORT}/api/items`);
     console.log(`Healthcheck: ${HOST}:${PORT}/api/health\n`);
 });
+
+module.exports = app;
