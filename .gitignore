@@ -31,3 +31,6 @@ Thumbs.db
 *.ntvs*
 *.njsproj
 *.sln
+
+# Runtime data
+backend/data/items.json
