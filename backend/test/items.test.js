@@ -5,7 +5,13 @@ const app = require('../app');
 
 const dataFile = path.join(__dirname, '../data/items.json');
 
+const dataDir = path.dirname(dataFile);
+
 beforeEach(() => {
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+
   fs.writeFileSync(dataFile, JSON.stringify([]));
 });
 
