@@ -3,12 +3,14 @@ version: "3.8"
 services:
   backend:
     build: ./backend
+    image: aivarpav/films-backend:1.0
     ports:
       - "5003:5003"
     container_name: backend-service
 
   frontend:
     build: ./frontend/app
+    image: aivarpav/films-frontend:1.0
     ports:
       - "3000:80"
     depends_on:
